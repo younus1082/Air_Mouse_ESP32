@@ -2,23 +2,23 @@
 
 This project turns an ESP32 and an MPU6050 sensor into a high-performance Bluetooth Air Mouse. It moves beyond basic air mice by adding **Joystick-Style Velocity Control**, a **"Clutch" mechanism** for precision, and **Motion Gestures** for rapid scrolling.
 
-## ✨ Key Features
+##  Key Features
 
-  * **🕹️ Joystick Control:** Tilt the device to move the cursor. The more you tilt, the faster it accelerates (no constant wrist twisting).
-  * **🛑 Deadman Clutch:** The cursor remains frozen until you hold the "Move" button. Release it to stop instantly—perfect for repositioning your hand without losing the cursor.
-  * **⚡ Motion Gestures:**
+  * **Joystick Control:** Tilt the device to move the cursor. The more you tilt, the faster it accelerates (no constant wrist twisting).
+  * ** Deadman Clutch:** The cursor remains frozen until you hold the "Move" button. Release it to stop instantly—perfect for repositioning your hand without losing the cursor.
+  * ** Motion Gestures:**
       * **Flick Down:** Instantly scrolls to the bottom of the page.
       * **Flick Up:** Instantly scrolls to the top of the page.
-  * **📱 Bluetooth BLE:** Works wirelessly with Windows, Mac, Android, and iOS (no dongle required).
+  * **Bluetooth BLE:** Works wirelessly with Windows, Mac, Android, and iOS (no dongle required).
 
-## 🛠️ Hardware Requirements
+## Hardware Requirements
 
   * **ESP32 Development Board** (e.g., DOIT ESP32 DevKit V1)
   * **MPU6050** (or MPU6500) Gyroscope/Accelerometer
   * **4x Push Buttons**
   * **Wires & Breadboard/PCB**
 
-## 🔌 Wiring Diagram
+## Wiring Diagram
 
 | ESP32 Pin | Component | Connection | Function |
 | :--- | :--- | :--- | :--- |
@@ -31,9 +31,9 @@ This project turns an ESP32 and an MPU6050 sensor into a high-performance Blueto
 | **14** | Button 3 | to GND | **CLUTCH (Hold to Move)** |
 | **27** | Button 4 | to GND | **Scroll Down (Click)** |
 
-> **⚠️ Note:** All buttons uses internal pull-up resistors. Connect one leg of the button to the ESP32 Pin and the other leg directly to **GND**.
+> **Note:** All buttons uses internal pull-up resistors. Connect one leg of the button to the ESP32 Pin and the other leg directly to **GND**.
 
-## 💻 Installation Guide
+## Installation Guide
 
 ### 1\. Setup Arduino IDE
 
@@ -53,7 +53,7 @@ Go to **Sketch \> Include Library \> Manage Libraries...** and install:
 
 Select your board (**DOIT ESP32 DEVKIT V1**) and upload the code below.
 
-## 📄 The Final Code
+## The Final Code
 
 ```cpp
 #include <BleMouse.h>
@@ -195,7 +195,7 @@ void loop() {
 }
 ```
 
-## 🎮 How to Operate
+## How to Operate
 
 1.  **Power On:** Plug in the device.
 2.  **Calibrate:** **IMMEDIATELY lay it flat on a table.** Do not touch it for 3 seconds while it calibrates the "Zero Point."
